@@ -32,8 +32,11 @@ app.get('/fruits/banana', (req, res) => {
 
  // post 
  app.post('/addUser', (req, res) => {
-     console.log(req.body);
-
+    //  console.log ( 'data recieved', req.body);
+    //save to database
+    const user = req.body;
+    user.id = 55;
+    res.send(user);
 
  })
 
